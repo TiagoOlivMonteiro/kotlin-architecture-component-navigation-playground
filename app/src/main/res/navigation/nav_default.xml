@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_default"
+            app:startDestination="@id/fragment_list">
+
+    <fragment
+            android:id="@+id/fragment_list"
+            android:name="me.tmonteiro.kacn.playground.ui.CardListFragment"
+            tools:layout="@layout/fragment_card_list">
+        <action
+                app:enterAnim="@anim/slide_in"
+                app:exitAnim="@anim/slide_out"
+                app:popEnterAnim="@anim/slide_pop_out"
+                app:popExitAnim="@anim/slide_pop_in"
+                android:id="@+id/actionDetail"
+                app:destination="@+id/fragment_detail"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/fragment_detail"
+            android:name="me.tmonteiro.kacn.playground.ui.CardDetailFragment"
+            tools:layout="@layout/fragment_card_detail">
+        <argument
+                android:name="id"
+                app:argType="string"
+                app:nullable="false"/>
+    </fragment>
+
+</navigation>

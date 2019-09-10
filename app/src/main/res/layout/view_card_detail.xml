@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_detail_gradient">
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cv_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_detail_cardview_height"
+            android:layout_margin="@dimen/card_view_info_container_margin"
+            app:cardBackgroundColor="@color/card_detatil_cardview"
+            app:cardCornerRadius="@dimen/card_detail_cardview_corner"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="@dimen/card_view_info_card_elevation">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_vertical_start"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/card_view_guideline_margin"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_vertical_end"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/card_view_guideline_margin"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_top"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="@dimen/card_view_guideline_margin"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_icon_limit"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/card_view_guideline_margin_icon_limit"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_icon"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title"
+                    app:layout_constraintStart_toEndOf="@id/guide_vertical_start"
+                    app:layout_constraintEnd_toStartOf="@id/guide_icon_limit"
+                    android:layout_width="@dimen/card_view_icon_width"
+                    android:layout_height="@dimen/card_view_icon_height"
+                    android:layout_margin="@dimen/card_detail_icon_margin"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_title"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/card_view_title_height"
+                    android:textSize="@dimen/card_detail_card_text"
+                    android:textStyle="bold"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@android:color/white"
+                    tools:text="Card Title"/>
+
+
+            <View
+                    android:id="@+id/rarity_type_container"
+                    android:background="@color/card_epic"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title"
+                    app:layout_constraintStart_toEndOf="@id/guide_icon_limit"
+                    app:layout_constraintEnd_toStartOf="@id/guide_vertical_end"
+                    android:layout_marginTop="@dimen/card_view_rarity_type_container_top"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/card_view_rarity_type_container_height"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_rarity_label"
+                    app:layout_constraintTop_toTopOf="@id/rarity_type_container"
+                    app:layout_constraintStart_toEndOf="@id/guide_icon_limit"
+                    android:textSize="@dimen/card_view_text_size"
+                    android:textColor="@color/card_detatil_cardview"
+                    android:text="@string/label_rarity"
+                    android:layout_margin="@dimen/card_view_rarity_label_margin"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_height="@dimen/card_view_rarity_label_height"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_rarity"
+                    app:layout_constraintTop_toBottomOf="@id/tv_rarity_label"
+                    app:layout_constraintStart_toEndOf="@id/guide_icon_limit"
+                    android:textSize="@dimen/card_view_text_size"
+                    android:textColor="@color/card_detatil_cardview"
+                    android:layout_margin="@dimen/card_view_label_rarity_margin"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/shadow_color"
+                    android:shadowRadius="@dimen/card_view_shadow_radius"
+                    android:shadowDy="@dimen/card_view_shadow_dy"
+                    android:shadowDx="@dimen/card_view_shadow_dx"
+                    android:layout_height="wrap_content"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_type_label"
+                    app:layout_constraintTop_toTopOf="@id/rarity_type_container"
+                    app:layout_constraintEnd_toStartOf="@id/guide_vertical_end"
+                    android:textSize="@dimen/card_view_text_size"
+                    android:textColor="@color/card_detatil_cardview"
+                    android:text="@string/label_type"
+                    android:layout_margin="@dimen/card_view_type_label_margin"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_type"
+                    app:layout_constraintTop_toBottomOf="@id/tv_type_label"
+                    app:layout_constraintEnd_toStartOf="@id/guide_vertical_end"
+                    android:textSize="@dimen/card_view_text_size"
+                    android:textColor="@color/card_detatil_cardview"
+                    android:layout_margin="@dimen/card_view_type_label_margin"
+                    android:textStyle="bold"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="@dimen/card_view_shadow_radius"
+                    android:shadowDy="@dimen/card_view_shadow_dy"
+                    android:shadowDx="@dimen/card_view_shadow_dx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_description"
+                    app:layout_constraintTop_toBottomOf="@id/rarity_type_container"
+                    app:layout_constraintStart_toEndOf="@id/guide_icon_limit"
+                    app:layout_constraintEnd_toStartOf="@id/guide_vertical_end"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/card_detail_description_text"
+                    android:layout_marginTop="@dimen/card_view_description_top"
+                    android:textColor="@color/card_detatil_description"
+                    tools:text="Description"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
+
+

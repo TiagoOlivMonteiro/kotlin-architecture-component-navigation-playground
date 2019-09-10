@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient
+        android:angle="90"
+        android:endColor="@color/card_legendary_gradient_02"
+        android:startColor="@color/card_legendary_gradient_01"
+        android:type="linear" />
+    <padding android:top="100dp" />
+    <corners android:radius="5dp" />
+
+
+</shape>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_gravity="center_horizontal"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/card_detail_gradient">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:textColor="@color/card_detatil_cardview"
+            android:gravity="center"
+            android:textSize="@dimen/view_error_text"
+            android:textStyle="bold"
+            android:text="@string/label_problem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_retry"
+            android:layout_marginTop="@dimen/view_error_retry_top"
+            android:text="@string/label_try_again"
+            android:background="@drawable/button_background"
+            android:textColor="@color/card_detatil_cardview"
+            android:layout_width="@dimen/view_error_retry_width"
+            android:layout_height="@dimen/view_error_retry_height"/>
+
+
+</LinearLayout>

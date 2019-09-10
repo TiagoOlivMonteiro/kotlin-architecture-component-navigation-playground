@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_view_rarity_width">72dp</dimen>
+    <dimen name="card_view_rarity_height">85dp</dimen>
+    <dimen name="card_view_rarity_margin">8dp</dimen>
+
+    <dimen name="card_icon">80dp</dimen>
+    <dimen name="card_icon_margin">10dp</dimen>
+
+    <dimen name="card_title_text">12sp</dimen>
+
+    <dimen name="card_elixir_cost_text">20sp</dimen>
+
+    <dimen name="card_arena_width">80dp</dimen>
+    <dimen name="card_arena_magin">5dp</dimen>
+    <dimen name="card_arena_text">12sp</dimen>
+
+    <dimen name="card_detail_cardview_height">200dp</dimen>
+    <dimen name="card_detail_cardview_corner">3dp</dimen>
+
+    <dimen name="card_detail_icon">80dp</dimen>
+    <dimen name="card_detail_icon_margin">10dp</dimen>
+
+    <dimen name="card_detail_card_text">20sp</dimen>
+    <dimen name="card_detail_description_text">16sp</dimen>
+
+    <dimen name="card_detail_info_margin">5dp</dimen>
+
+    <dimen name="card_view_guideline_margin">5dp</dimen>
+    <dimen name="card_view_guideline_margin_icon_limit">130dp</dimen>
+    <dimen name="card_view_icon_width">110dp</dimen>
+    <dimen name="card_view_icon_height">110dp</dimen>
+    <dimen name="card_view_title_height">35dp</dimen>
+    <dimen name="card_view_rarity_type_container_top">5dp</dimen>
+    <dimen name="card_view_rarity_type_container_height">60dp</dimen>
+    <dimen name="card_view_rarity_label_margin">5dp</dimen>
+    <dimen name="card_view_rarity_label_height">16dp</dimen>
+    <dimen name="card_view_label_rarity_margin">5dp</dimen>
+    <dimen name="card_view_type_label_margin">5dp</dimen>
+    <dimen name="card_view_text_size">18sp</dimen>
+    <dimen name="card_view_description_top">5dp</dimen>
+    <dimen name="card_view_info_container_margin">10dp</dimen>
+    <dimen name="card_view_info_card_elevation">3dp</dimen>
+
+    <dimen name="card_view_shadow_dx">7</dimen>
+    <dimen name="card_view_shadow_dy">6</dimen>
+    <dimen name="card_view_shadow_radius">5</dimen>
+
+    <dimen name="card_view_loading_height">25dp</dimen>
+    <dimen name="card_view_loading_top">5dp</dimen>
+
+    <dimen name="view_error_text">22sp</dimen>
+    <dimen name="view_error_retry_top">20dp</dimen>
+    <dimen name="view_error_retry_width">200dp</dimen>
+    <dimen name="view_error_retry_height">50dp</dimen>
+
+    <dimen name="view_item_list_card_container_width">100dp</dimen>
+    <dimen name="view_item_list_card_container_height">140dp</dimen>
+    <dimen name="view_item_list_card_elixir_cost_width">40dp</dimen>
+    <dimen name="view_item_list_card_elixir_cost_height">40dp</dimen>
+
+    <dimen name="view_item_list_loading_guideline_margin_01">5dp</dimen>
+    <dimen name="view_item_list_loading_guideline_margin_02">130dp</dimen>
+    <dimen name="view_item_list_loading_guideline_margin_03">260dp</dimen>
+    <dimen name="view_item_list_loading_guideline_margin_04">390dp</dimen>
+    <dimen name="view_item_list_loading_guideline_margin_05">520dp</dimen>
+
+</resources>

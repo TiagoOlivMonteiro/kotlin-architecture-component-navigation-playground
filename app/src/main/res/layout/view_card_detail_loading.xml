@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/card_detail_gradient">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center_vertical">
+
+        <FrameLayout
+                android:id="@+id/cv_info_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_detail_cardview_height"
+                android:layout_margin="@dimen/card_view_info_container_margin"
+                android:background="@drawable/card_loading_background_02">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide_vertical_start"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="@dimen/card_view_guideline_margin"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide_vertical_end"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_end="@dimen/card_view_guideline_margin"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide_top"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_begin="@dimen/card_view_guideline_margin"/>
+
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide_icon_limit"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="@dimen/card_view_guideline_margin_icon_limit"/>
+
+                <View
+                        android:id="@+id/view_01"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/guide_vertical_start"
+                        app:layout_constraintEnd_toStartOf="@id/guide_icon_limit"
+                        android:layout_width="@dimen/card_detail_icon"
+                        android:layout_height="@dimen/card_detail_icon"
+                        android:layout_margin="@dimen/card_detail_icon_margin"
+                        android:background="@drawable/card_loading_background"/>
+
+                <View
+                        android:id="@+id/view_02"
+                        app:layout_constraintTop_toBottomOf="@id/guide_top"
+                        app:layout_constraintStart_toEndOf="@id/guide_icon_limit"
+                        app:layout_constraintEnd_toStartOf="@id/guide_vertical_end"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/card_view_loading_height"
+                        android:textSize="@dimen/card_detail_card_text"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/card_detail_info_margin"
+                        android:background="@drawable/card_loading_background"
+                        android:textColor="@color/card_detatil_title"/>
+
+                <View
+                        android:id="@+id/view_03"
+                        app:layout_constraintTop_toBottomOf="@id/view_02"
+                        app:layout_constraintStart_toEndOf="@id/guide_icon_limit"
+                        app:layout_constraintEnd_toStartOf="@id/guide_vertical_end"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="@dimen/card_view_loading_top"
+                        android:layout_height="@dimen/card_view_loading_height"
+                        android:textSize="@dimen/card_detail_description_text"
+                        android:textColor="@color/card_detatil_description"
+
+                        android:background="@drawable/card_loading_background"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</FrameLayout>

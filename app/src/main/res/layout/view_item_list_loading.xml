@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/card_detail_gradient">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center_vertical"
+            android:layout_gravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_vertical_start"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="5dp"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_vertical_end"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/card_view_guideline_margin"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_horizontal_top_01"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="@dimen/view_item_list_loading_guideline_margin_01"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_horizontal_top_02"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="@dimen/view_item_list_loading_guideline_margin_02"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_horizontal_top_03"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="@dimen/view_item_list_loading_guideline_margin_03"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_horizontal_top_04"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="@dimen/view_item_list_loading_guideline_margin_04"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_horizontal_top_05"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="@dimen/view_item_list_loading_guideline_margin_05"/>
+
+            <!-- 1st line -->
+            <View
+                    android:id="@+id/view_01_01"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_01"
+                    app:layout_constraintStart_toEndOf="@id/guide_vertical_start"
+                    app:layout_constraintEnd_toStartOf="@id/view_01_02"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_01_02"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_01"
+                    app:layout_constraintStart_toEndOf="@id/view_01_01"
+                    app:layout_constraintEnd_toStartOf="@id/view_01_03"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_01_03"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_01"
+                    app:layout_constraintStart_toEndOf="@id/view_01_02"
+                    app:layout_constraintEnd_toStartOf="@id/view_01_04"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_01_04"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_01"
+                    app:layout_constraintStart_toEndOf="@id/view_01_03"
+                    app:layout_constraintEnd_toStartOf="@id/guide_vertical_end"
+                    android:background="@drawable/card_loading_background"/>
+
+            <!-- 2nd line -->
+            <View
+                    android:id="@+id/view_02_01"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_02"
+                    app:layout_constraintStart_toEndOf="@id/guide_vertical_start"
+                    app:layout_constraintEnd_toStartOf="@id/view_02_02"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_02_02"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_02"
+                    app:layout_constraintStart_toEndOf="@id/view_02_01"
+                    app:layout_constraintEnd_toStartOf="@id/view_02_03"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_02_03"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_02"
+                    app:layout_constraintStart_toEndOf="@id/view_02_02"
+                    app:layout_constraintEnd_toStartOf="@id/view_02_04"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_02_04"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_02"
+                    app:layout_constraintStart_toEndOf="@id/view_02_03"
+                    app:layout_constraintEnd_toStartOf="@id/guide_vertical_end"
+                    android:background="@drawable/card_loading_background"/>
+
+            <!-- 3rd line-->
+            <View
+                    android:id="@+id/view_03_01"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_03"
+                    app:layout_constraintStart_toEndOf="@id/guide_vertical_start"
+                    app:layout_constraintEnd_toStartOf="@id/view_03_02"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_03_02"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_03"
+                    app:layout_constraintStart_toEndOf="@id/view_03_01"
+                    app:layout_constraintEnd_toStartOf="@id/view_03_03"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_03_03"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_03"
+                    app:layout_constraintStart_toEndOf="@id/view_03_02"
+                    app:layout_constraintEnd_toStartOf="@id/view_03_04"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_03_04"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_03"
+                    app:layout_constraintStart_toEndOf="@id/view_03_03"
+                    app:layout_constraintEnd_toStartOf="@id/guide_vertical_end"
+                    android:background="@drawable/card_loading_background"/>
+
+            <!-- 4th line -->
+            <View
+                    android:id="@+id/view_04_01"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_04"
+                    app:layout_constraintStart_toEndOf="@id/guide_vertical_start"
+                    app:layout_constraintEnd_toStartOf="@id/view_04_02"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_04_02"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_04"
+                    app:layout_constraintStart_toEndOf="@id/view_04_01"
+                    app:layout_constraintEnd_toStartOf="@id/view_04_03"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_04_03"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_04"
+                    app:layout_constraintStart_toEndOf="@id/view_04_02"
+                    app:layout_constraintEnd_toStartOf="@id/view_04_04"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_04_04"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_04"
+                    app:layout_constraintStart_toEndOf="@id/view_04_03"
+                    app:layout_constraintEnd_toStartOf="@id/guide_vertical_end"
+                    android:background="@drawable/card_loading_background"/>
+
+            <!-- 5th line -->
+            <View
+                    android:id="@+id/view_05_01"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_05"
+                    app:layout_constraintStart_toEndOf="@id/guide_vertical_start"
+                    app:layout_constraintEnd_toStartOf="@id/view_05_02"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_05_02"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_05"
+                    app:layout_constraintStart_toEndOf="@id/view_05_01"
+                    app:layout_constraintEnd_toStartOf="@id/view_05_03"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_05_03"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_05"
+                    app:layout_constraintStart_toEndOf="@id/view_05_02"
+                    app:layout_constraintEnd_toStartOf="@id/view_05_04"
+                    android:background="@drawable/card_loading_background"/>
+
+            <View
+                    android:id="@+id/view_05_04"
+                    android:layout_height="@dimen/card_view_rarity_height"
+                    android:layout_width="@dimen/card_view_rarity_width"
+                    app:layout_constraintTop_toBottomOf="@id/guide_horizontal_top_05"
+                    app:layout_constraintStart_toEndOf="@id/view_05_03"
+                    app:layout_constraintEnd_toStartOf="@id/guide_vertical_end"
+                    android:background="@drawable/card_loading_background"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</FrameLayout>

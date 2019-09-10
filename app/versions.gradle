@@ -1,0 +1,27 @@
+ext.versions = [
+
+        compileSdk           : 28,
+        targetSdk            : 28,
+        minSdk               : 23,
+
+        android_plugin       : '3.4.2',
+        jacoco               : '0.8.4',
+        koin                 : '2.0.1',
+        kotlin               : '1.3.21',
+        moshi                : '1.8.0',
+        retrofit             : '2.6.0',
+        arch_toolkit         : '0.1.0',
+        coroutines           : '1.3.0-M2',
+        okhttp               : '4.0.1',
+        shimmer              : '0.4.0',
+        picasso              : '2.71828',
+
+        androidx : [
+            core        : '1.0.2',
+            appcompat   : '1.1.0-rc01',
+            constraint  : '2.0.0-beta2',
+            lifecycle   : '2.2.0-alpha02',
+            navigation  : '2.0.0',
+            fragment    : '1.2.0-alpha01'
+        ]
+]

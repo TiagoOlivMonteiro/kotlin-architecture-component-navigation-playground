@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+             android:inAnimation="@android:anim/fade_in"
+             android:outAnimation="@android:anim/fade_out"
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:id="@+id/view_flipper">
+
+
+    <include layout="@layout/view_item_list_loading"/>
+
+    <include layout="@layout/view_error"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_detail_gradient"
+            tools:listitem="@layout/view_item_list_card"/>
+
+</ViewFlipper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@drawable/card_gradient_01"
+        android:duration="2000" />
+
+    <item
+        android:drawable="@drawable/card_gradient_02"
+        android:duration="2000" />
+
+    <item
+        android:drawable="@drawable/card_gradient_03"
+        android:duration="2000" />
+
+    <item
+        android:drawable="@drawable/card_gradient_04"
+        android:duration="2000" />
+
+
+
+
+</animation-list>
