@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-//apply plugin: 'kotlin-android-extensions'
 apply plugin: 'androidx.navigation.safeargs.kotlin'
 apply plugin: 'kotlin-kapt'
 
@@ -12,7 +11,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "me.tmonteiro.kacn.playground.TestRunner"
     }
     buildTypes {
         release {
@@ -23,6 +22,8 @@ android {
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
 }
 
@@ -42,6 +43,8 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:${versions.androidx.navigation}"
     implementation "androidx.constraintlayout:constraintlayout:${versions.androidx.constraint}"
     implementation "androidx.fragment:fragment:${versions.androidx.fragment}"
+    api "androidx.fragment:fragment-testing:${versions.androidx.fragment}"
+    implementation "androidx.test.uiautomator:uiautomator:${versions.androidx.uiautomator}"
     implementation "com.squareup.moshi:moshi:${versions.moshi}"
     implementation "com.squareup.retrofit2:retrofit:${versions.retrofit}"
     implementation "com.squareup.retrofit2:converter-moshi:${versions.retrofit}"
@@ -49,26 +52,17 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}"
     implementation "com.facebook.shimmer:shimmer:${versions.shimmer}"
     implementation "com.squareup.picasso:picasso:${versions.picasso}"
-    //implementation "br.com.arch.toolkit:livedata:${versions.arch_toolkit}"
-    //implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}"
 
     kapt "com.squareup.moshi:moshi-kotlin-codegen:${versions.moshi}"
 
     // Tests dependencies
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    testImplementation "junit:junit:${versions.junit}"
+    debugImplementation "androidx.fragment:fragment-testing:${versions.androidx.fragment}"
+    api "androidx.test:runner:${versions.androidx.testrunner}"
+    api "androidx.test:core-ktx:${versions.androidx.testcore}"
+    api "androidx.test.espresso:espresso-core:${versions.androidx.espresso}"
+    api "androidx.test.ext:junit:${versions.androidx.junit}"
+    api "io.mockk:mockk-android:${versions.mockk}"
 
-    // Exclusive Android Test Dependencies
-//    androidTestImplementation "io.mockk:mockk-android:${versions.mockk}"
-//
-//    // Exclusive Local Test Dependencies
-//    testImplementation "org.robolectric:robolectric:${versions.robolectric}"
-//    testImplementation "org.threeten:threetenbp:${versions.threetenbp}"
-//    testImplementation "io.mockk:mockk:${versions.mockk}"
-//
-//    // Solve a issue https://github.com/robolectric/robolectric/pull/4736
-//    mockImplementation "androidx.fragment:fragment-testing:${versions.androidx.fragment}"
-//    debugImplementation "androidx.fragment:fragment-testing:${versions.androidx.fragment}"
-//    homologImplementation "androidx.fragment:fragment-testing:${versions.androidx.fragment}"
+
 }
