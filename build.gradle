@@ -27,6 +27,39 @@ allprojects {
                 sourceCompatibility JavaVersion.VERSION_1_8
                 targetCompatibility JavaVersion.VERSION_1_8
             }
+
+            defaultConfig {
+                multiDexEnabled false
+            }
+
+            buildTypes {
+                debug {
+                    testCoverageEnabled true
+                }
+            }
+
+            testOptions {
+                animationsDisabled true
+                unitTests.includeAndroidResources true
+                unitTests.returnDefaultValues true
+            }
+
+            dexOptions {
+                preDexLibraries true
+            }
+
+        }
+    }
+
+    configurations.all {
+        exclude module: 'listenablefuture'
+
+        resolutionStrategy {
+            eachDependency {
+                if (requested.group == 'androidx.test' && requested.name == 'monitor') {
+                    useVersion versions.androidx.astl
+                }
+            }
         }
     }
 }
